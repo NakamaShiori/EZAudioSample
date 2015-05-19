@@ -14,6 +14,11 @@
 		E57772951B0B3FFA00F56647 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E57772941B0B3FFA00F56647 /* Images.xcassets */; };
 		E57772981B0B3FFA00F56647 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E57772961B0B3FFA00F56647 /* LaunchScreen.xib */; };
 		E57772A41B0B3FFA00F56647 /* EZAudioSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E57772A31B0B3FFA00F56647 /* EZAudioSampleTests.m */; };
+		E57772AE1B0B404500F56647 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57772AD1B0B404500F56647 /* AudioToolbox.framework */; };
+		E57772B01B0B404D00F56647 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57772AF1B0B404D00F56647 /* AVFoundation.framework */; };
+		E57772B21B0B405500F56647 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57772B11B0B405500F56647 /* GLKit.framework */; };
+		E57772B61B0B422600F56647 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = E57772B51B0B422600F56647 /* Podfile */; };
+		EDC6E91685CCE43292FD2A75 /* libPods-EZAudioSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDCC3FEB29CB99A42B6410EF /* libPods-EZAudioSample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A4D3F7F608F0FA1A56DEB77 /* Pods-EZAudioSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZAudioSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EZAudioSample/Pods-EZAudioSample.debug.xcconfig"; sourceTree = "<group>"; };
+		B80A6C38870414E31A99B665 /* Pods-EZAudioSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZAudioSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-EZAudioSample/Pods-EZAudioSample.release.xcconfig"; sourceTree = "<group>"; };
+		BDCC3FEB29CB99A42B6410EF /* libPods-EZAudioSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-EZAudioSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57772841B0B3FFA00F56647 /* EZAudioSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZAudioSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57772881B0B3FFA00F56647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E57772891B0B3FFA00F56647 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +48,10 @@
 		E577729D1B0B3FFA00F56647 /* EZAudioSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EZAudioSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57772A21B0B3FFA00F56647 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E57772A31B0B3FFA00F56647 /* EZAudioSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EZAudioSampleTests.m; sourceTree = "<group>"; };
+		E57772AD1B0B404500F56647 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E57772AF1B0B404D00F56647 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E57772B11B0B405500F56647 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		E57772B51B0B422600F56647 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +59,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E57772B21B0B405500F56647 /* GLKit.framework in Frameworks */,
+				E57772B01B0B404D00F56647 /* AVFoundation.framework in Frameworks */,
+				E57772AE1B0B404500F56647 /* AudioToolbox.framework in Frameworks */,
+				EDC6E91685CCE43292FD2A75 /* libPods-EZAudioSample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +76,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BB25AB14636DEF6E743126B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDCC3FEB29CB99A42B6410EF /* libPods-EZAudioSample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C3203DA3176586FF27E3237D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A4D3F7F608F0FA1A56DEB77 /* Pods-EZAudioSample.debug.xcconfig */,
+				B80A6C38870414E31A99B665 /* Pods-EZAudioSample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E577727B1B0B3FFA00F56647 = {
 			isa = PBXGroup;
 			children = (
+				E57772B51B0B422600F56647 /* Podfile */,
+				E57772B11B0B405500F56647 /* GLKit.framework */,
+				E57772AF1B0B404D00F56647 /* AVFoundation.framework */,
+				E57772AD1B0B404500F56647 /* AudioToolbox.framework */,
 				E57772861B0B3FFA00F56647 /* EZAudioSample */,
 				E57772A01B0B3FFA00F56647 /* EZAudioSampleTests */,
 				E57772851B0B3FFA00F56647 /* Products */,
+				C3203DA3176586FF27E3237D /* Pods */,
+				BB25AB14636DEF6E743126B3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E57772A71B0B3FFA00F56647 /* Build configuration list for PBXNativeTarget "EZAudioSample" */;
 			buildPhases = (
+				DED3923924ED5E228B39D8B9 /* Check Pods Manifest.lock */,
 				E57772801B0B3FFA00F56647 /* Sources */,
 				E57772811B0B3FFA00F56647 /* Frameworks */,
 				E57772821B0B3FFA00F56647 /* Resources */,
+				35CD8BC43AEDE8539C1667DA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -201,6 +242,7 @@
 			files = (
 				E57772931B0B3FFA00F56647 /* Main.storyboard in Resources */,
 				E57772981B0B3FFA00F56647 /* LaunchScreen.xib in Resources */,
+				E57772B61B0B422600F56647 /* Podfile in Resources */,
 				E57772951B0B3FFA00F56647 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,6 +255,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		35CD8BC43AEDE8539C1667DA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EZAudioSample/Pods-EZAudioSample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DED3923924ED5E228B39D8B9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E57772801B0B3FFA00F56647 /* Sources */ = {
@@ -345,6 +420,7 @@
 		};
 		E57772A81B0B3FFA00F56647 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A4D3F7F608F0FA1A56DEB77 /* Pods-EZAudioSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EZAudioSample/Info.plist;
@@ -355,6 +431,7 @@
 		};
 		E57772A91B0B3FFA00F56647 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B80A6C38870414E31A99B665 /* Pods-EZAudioSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = EZAudioSample/Info.plist;
@@ -416,6 +493,7 @@
 				E57772A91B0B3FFA00F56647 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E57772AA1B0B3FFA00F56647 /* Build configuration list for PBXNativeTarget "EZAudioSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +502,7 @@
 				E57772AC1B0B3FFA00F56647 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
