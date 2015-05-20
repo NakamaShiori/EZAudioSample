@@ -51,6 +51,8 @@
     /*
      Customizing the audio plot's look
      */
+    // Size
+    self.audioPlot.frame = self.view.frame;
     // Background color
     self.audioPlot.backgroundColor = [UIColor colorWithRed: 0.984 green: 0.71 blue: 0.365 alpha: 1];
     // Waveform color
@@ -65,7 +67,7 @@
     /*
      Start the microphone
      */
-    [self.microphone startFetchingAudio];
+    //[self.microphone startFetchingAudio];
     
     self.isRecording = NO;
 }
@@ -77,10 +79,10 @@
 
 -(IBAction)playStart:(id)sender{
     // Background color
-    self.audioPlot.backgroundColor = [UIColor colorWithRed:0.984 green:0.471 blue:0.525 alpha:1.0];
+    self.audioPlot.backgroundColor = [UIColor colorWithRed: 0.569 green: 0.82 blue: 0.478 alpha: 1];
     
     // Update microphone state
-    [self.microphone stopFetchingAudio];
+    //[self.microphone stopFetchingAudio];
     
     // Update recording state
     self.isRecording = NO;
@@ -107,14 +109,13 @@
                                                               error:&err];
     [self.audioPlayer play];
     self.audioPlayer.delegate = self;
-    [self.playButton setTitle:@"Stop Play" forState:UIControlStateNormal];
+    [self.playButton setTitle:@"Play Stop" forState:UIControlStateNormal];
     
 }
 
 -(IBAction)recordStart:(id)sender{
     // Background color
-    self.audioPlot.backgroundColor = [UIColor colorWithRed: 0.569 green: 0.82 blue: 0.478 alpha: 1];
-    
+    self.audioPlot.backgroundColor =  [UIColor colorWithRed:0.984 green:0.471 blue:0.525 alpha:1.0];
     [self.playButton setTitle:@"Start Play" forState:UIControlStateNormal];
     if( self.audioPlayer )
     {
@@ -128,7 +129,10 @@
     
     if(self.isRecording)
     {
-        
+        /*
+         Microphone OFF
+         */
+        [self.microphone stopFetchingAudio];
         // Background color
         self.audioPlot.backgroundColor = [UIColor colorWithRed: 0.984 green: 0.71 blue: 0.365 alpha: 1];
         
@@ -138,6 +142,10 @@
     }
     else
     {
+        /*
+         Microphone ON
+         */
+        [self.microphone startFetchingAudio];
         /*
          Create the recorder
          */
@@ -184,10 +192,11 @@ withNumberOfChannels:(UInt32)numberOfChannels {
 -(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
     // Background color
     self.audioPlot.backgroundColor = [UIColor colorWithRed: 0.984 green: 0.71 blue: 0.365 alpha: 1];
+    [self.playButton setTitle:@"Play Start" forState:UIControlStateNormal];
     
     self.audioPlayer = nil;
     
-    [self.microphone startFetchingAudio];
+    //[self.microphone startFetchingAudio];
 }
 
 #pragma mark - Utility

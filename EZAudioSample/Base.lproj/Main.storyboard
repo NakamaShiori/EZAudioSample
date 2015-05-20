@@ -14,7 +14,7 @@
                         <subviews>
                             <view contentMode="scaleToFill" id="Wci-vb-dug" customClass="EZAudioPlotGL">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="K5O-i9-Wjm">
                                         <rect key="frame" x="100" y="328" width="120" height="40"/>
