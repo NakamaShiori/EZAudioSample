@@ -109,14 +109,14 @@
                                                               error:&err];
     [self.audioPlayer play];
     self.audioPlayer.delegate = self;
-    [self.playButton setTitle:@"Play Stop" forState:UIControlStateNormal];
+    [self.playButton setTitle:@"Play Start" forState:UIControlStateNormal];
     
 }
 
 -(IBAction)recordStart:(id)sender{
     // Background color
     self.audioPlot.backgroundColor =  [UIColor colorWithRed:0.984 green:0.471 blue:0.525 alpha:1.0];
-    [self.playButton setTitle:@"Start Play" forState:UIControlStateNormal];
+    [self.playButton setTitle:@"Play Start" forState:UIControlStateNormal];
     if( self.audioPlayer )
     {
         if( self.audioPlayer.playing )
